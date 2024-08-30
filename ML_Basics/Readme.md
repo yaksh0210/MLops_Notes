@@ -13,6 +13,36 @@
 
 + As it is evident from the name, it gives the computer that makes it more similar to humans: The ability to learn.
 
+### Some Of Basic Defination
+
+##### Training: 
+
++ act of combining data with (hyper) parameters to yield a model
+
+##### Model: 
+
++ A deployable (usually binary) artefact that is the result of training. Can be used at runtime to make predictions for example
+
+##### Hyper-parameter: 
+
++ parameters used during training of a model, typically set by a data scientist/human
+
+##### Parameter: 
+
++ A configuration variable set after the training phase (usually part of a model)
+
+##### Endpoint: 
+
++ Typically a model is deployed to an endpoint which may be a HTTPS service which serves up predictions (models may be also deployed to devices and other places)
+
+##### Training Pipeline: 
+
++ All the steps needed to prepare a model
+
+##### Training set: 
+
++ A set of example data used for training a model
+
 ## Types of Machine Learning
 
 <img src="./Images/Types-of-Machine-Leaning.png" width="500px" height="300px">
@@ -90,5 +120,23 @@
 + Unlike supervised learning, unsupervised learning doesn’t involve providing the algorithm with labeled target outputs. 
 
 + The primary goal of Unsupervised learning is often to discover hidden patterns, similarities, or clusters within the data, which can then be used for various purposes,   such as data exploration, visualization, dimensionality reduction, and more.
+
++ There are two main categories of unsupervised learning that are mentioned below:
+
+1. Clustering
+2. Association
+
+**1. Clustering:**
+
++ Clustering is the process of grouping data points into clusters based on their similarity. 
+
++ This technique is useful for identifying patterns and relationships in data without the need for labeled examples.
+
+**2. Association:**
+
++ Association rule learning is a technique for discovering relationships between items in a dataset. 
+
++ It identifies rules that indicate the presence of one item implies the presence of another item with a specific probability.
+
 
 

@@ -26,7 +26,7 @@
 
 ## What is MLOps ??
 
-<img src="./images/mlops_img.png">
+<img src="./images/mlops_img.png" width="600px">
 
 <br>
 
@@ -95,3 +95,6 @@
 
 
 
+## Basic workflow with azure pipeline
+
+<img src="./images/run_an_experiment_as_a_pipeline.png">
