@@ -380,3 +380,17 @@ Level
 + In the Staging/QA environment, one task creates an Azure Container Instance and deploys the scoring image as a web service on it.
 
 <hr>
+<br>
+
+## Which MLOps platform to choose
+
+|Question| Solution|
+|--------|-----------|
+Do you want managed or unmanaged solution?| **Managed**: Algorithmia , SageMaker, Azure MLOps, Google ML<br><br>**unmanaged**: Kubeflow, Tenserflow,seldon|
+What are the data security requirements of your organization? | **Critical data**: On premise solution and you can go with seldon , tenserflow, kubeflow and added on in all these algorithmia has some better features for security<br><br>**non critical data**: Cloud MLOps Solution|
+what is complexity of your model??| **Cloud Solution** this are best for scaling like AWS, Azure, Google<br><br>**On-premises** you can go for algorithmia|
+Containerization is must|**Custom conatiner**:Kubeflow , Seldon AI<br><br>**Cloud Provider**: Algorithmia, Azure, Google AI, Sagemaker|
+CLI vs GUI?| **CLI**: Seldon, Cortex, Optuna<br><br>**GUI** : Kubeflow, Polyaxon etc.|
+Which Language and libraries your team is comfartable in?? | **No Java Support**: Polyaxon, Comet, Optuna<br><br>**No Onnx Support**: kubeflow, ployaxon|
+What type of machine learning Objective you want to acheive?|**Traditional ML**:Mlflow, Metaflow<br><br>**Deep Learning**:Valhoai, Allegro|
+Specialized platform or end-to-end approach??|**Focused** : Algorithmia, Pachyderm<br><br>**End-to-End** : Valohai, Allegro|
