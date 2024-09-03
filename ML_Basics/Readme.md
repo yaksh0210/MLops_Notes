@@ -17,7 +17,7 @@
 
 ##### Training: 
 
-+ act of combining data with (hyper) parameters to yield a model
++ Act of combining data with (hyper) parameters to yield a model
 
 ##### Model: 
 
@@ -25,7 +25,7 @@
 
 ##### Hyper-parameter: 
 
-+ parameters used during training of a model, typically set by a data scientist/human
++ Parameters used during training of a model, typically set by a data scientist/human
 
 ##### Parameter: 
 
@@ -138,5 +138,27 @@
 
 + It identifies rules that indicate the presence of one item implies the presence of another item with a specific probability.
 
+### Advantages of Unsupervised Machine Learning
 
++ It helps to discover hidden patterns and various relationships between the data.
+
++ Used for tasks such as customer segmentation, anomaly detection, and data exploration.
+
++ It does not require labeled data and reduces the effort of data labeling.
+
+### Disadvantages of Unsupervised Machine Learning
+
++ Without using labels, it may be difficult to predict the quality of the model’s output.
+
++ Cluster Interpretability may not be clear and may not have meaningful interpretations.
+
+### Applications of Unsupervised Learning
+
++ Clustering: Group similar data points into clusters.
+
++ Market basket analysis: Discover associations between products.
+
++ Recommendation systems: Suggest products, movies, or content to users based on their historical behavior or preferences.
+
++ Customer behavior analysis: Uncover patterns and insights for better marketing and product recommendations.
 

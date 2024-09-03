@@ -1,5 +1,11 @@
 # Notes
 
+## Road-map
+
+<center><img src="./images/Roadmap.png"></center>
+
+
+
 ## Things to Remeber While Learning 
 
 + A DevOps engineer considering a move to machine learning, here are some points to consider:
@@ -26,7 +32,7 @@
 
 ## What is MLOps ??
 
-<img src="./images/mlops_img.png" width="600px">
+<center><img src="./images/mlops_img.png" width="600px"></center>
 
 <br>
 
@@ -94,7 +100,36 @@
     + For managing workflows, we can use Airflow and Luigi. Airflow is used for scheduling and managing workflows. Luigi is used for complex data pipelines for batch jobs.
 
 
+## Define Standards/Principles (Core Idea for MLOps)
 
-## Basic workflow with azure pipeline
+<center><img src="./images/flow_dia.png"></center>
 
-<img src="./images/run_an_experiment_as_a_pipeline.png">
+### 1. Transition Friction :
+
++ Use notebooks templates that define common functionality eg. database connection template , fetching data etc.
+
++ Proper documentation.
+
+### 2. Version control system :
+
++ Version control system for code, data, environments and artifacts.
+
+### 3. Performance :
+
++ Leverage distributed computing and containerization tools e.g. Docker, Kubernetes.
+
+### 4. Automation :
+
++ Build workflows, CI/CD pipelines.
+
++ MLOps is pipeline centric. Put pipelines in production than putting a model.
+
+### 5. Monitoring :
+
++ Powerful innovative monitoring tools to monitor data, features, distribution, latency, uptime, Memory utilization etc.
+
++ Monitorting tools like Prometheus, Grafana
+
+### 6. Continuous Training 
+
++ Automated retraining of models based on triggers or regular frequency.
