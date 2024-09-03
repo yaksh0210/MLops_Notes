@@ -136,8 +136,9 @@
 
 + Automated retraining of models based on triggers or regular frequency.
 
-
 <br>
+
+
 
 ## Who gets Benifited from MLOps
 
@@ -273,3 +274,109 @@ Level
 
 + Deploying the code automates the ability to build the model, making it much easier to retrain the model when necessary.
 
+### How does MLOps Stacks work?
+
++ When you initiate an MLOps Stacks project, the software steps you through entering the configuration details and then creates a directory containing the files that compose your project. 
+
++ This directory, or stack, implements the production MLOps workflow recommended by Databricks. 
+
++ The components shown in the diagram are created for you, and you need only edit the files to add your custom code.
+
+<br>
+
+<center><img src="./images/mlops-stacks-components.png"></center>
+
+<br>
+
+
++ In the diagram:
+
+    + A: A data scientist or ML engineer initializes the project using databricks bundle init mlops-stacks. When you initialize the project, you can choose to set up the ML code components (typically used by data scientists), the CI/CD components (typically used by ML engineers), or both.
+    
+    + B: ML engineers set up Databricks service principal secrets for CI/CD.
+    
+    + C: Data scientists develop models on Databricks or on their local system.
+    
+    + D: Data scientists create pull requests to update ML code.
+    
+    + E: The CI/CD runner runs notebooks, creates jobs, and performs other tasks in the staging and production workspaces.
+
+#### MLOps Stack includes the following three components:
+
+
+1. **ML code:**
+
++ MLOps Stacks creates a set of templates for an ML project including notebooks for training, batch inference, and so on. 
+
++ The standardized template allows data scientists to get started quickly, unifies project structure across teams, and enforces modularized code ready for testing.
+
+2. **ML resources as code:**
+
++ MLOps Stacks defines resources such as workspaces and pipelines for tasks like training and batch inference. 
+
++ Resources are defined in Databricks Asset Bundles to facilitate testing, optimization, and version control for the ML environment. 
+
++ For example, you can try a larger instance type for automated model retraining, and the change is automatically tracked for future reference.
+
+3. **CI/CD:**
+
++ You can use GitHub Actions or Azure DevOps to test and deploy ML code and resources, ensuring that all production changes are performed through automation and that only tested code is deployed to prod.
+
+<br>
+
+## Architecture Diagram for MLOps 
+
++ This Architecture shows how to implement continuous integration (CI), continuous delivery (CD), and retraining pipeline for an AI application using Azure DevOps and Azure Machine Learning. 
+
++ The solution is built on the scikit-learn diabetes dataset but can be easily adapted for any AI scenario and other popular build systems such as Jenkins and Travis.
+
+
+<center><img src="./images/mlops_architecture.png"></center>
+
+
+## Architecture Flow
+
+### Train Model
+
+1. Data Scientist writes/updates the code and push it to git repo. This triggers the Azure DevOps build pipeline (continuous integration).
+
+2. Once the Azure DevOps build pipeline is triggered, it runs following types of tasks:
+
+    + Run for new code: Every time new code is committed to the repo, the build pipeline performs data sanity tests and unit tests on the new code.
+
+    + One-time run: These tasks runs only for the first time the build pipeline runs. 
+       + It will programatically create an Azure ML Service Workspace, provision Azure ML Compute (used for model training compute), and publish an Azure ML Pipeline. 
+       
+       + This published Azure ML pipeline is the model training/retraining pipeline.
+
+3. The Azure ML Retraining pipeline is triggered once the Azure DevOps build pipeline completes. 
+
++ All the tasks in this pipeline runs on Azure ML Compute created earlier. 
+
++ Following are the tasks in this pipeline:
+
+    + **Train Model** task executes model training script on Azure ML Compute. It outputs a model file which is stored in the run history.
+     
+    + **Evaluate Model** task evaluates the performance of newly trained model with the model in production. 
+        
+        + If the new model performs better than the production model, the following steps are executed. 
+        
+        + If not, they will be skipped.
+     
+    + **Register Model** task takes the improved model and registers it with the Azure ML Model registry. This allows us to version control it.
+
+### Deploy Model
+
++ Once you have registered your ML model, you can use Azure ML + Azure DevOps to deploy it.
+
++ The **Package Model** task packages the new model along with the scoring file and its python dependencies into a docker image and pushes it to Azure Container Registry. 
+
+    + This image is used to deploy the model as web service.
+
++ The **Deploy Model** task handles deploying your Azure ML model to the cloud (ACI or AKS). 
+
+    + This pipeline deploys the model scoring image into Staging/QA and PROD environments.
+
++ In the Staging/QA environment, one task creates an Azure Container Instance and deploys the scoring image as a web service on it.
+
+<hr>
