@@ -15,31 +15,31 @@
 
 ### Some Of Basic Defination
 
-##### Training: 
+**Training:**
 
 + Act of combining data with (hyper) parameters to yield a model
 
-##### Model: 
+**Model:** 
 
 + A deployable (usually binary) artefact that is the result of training. Can be used at runtime to make predictions for example
 
-##### Hyper-parameter: 
+**Hyper-parameter:**  
 
 + Parameters used during training of a model, typically set by a data scientist/human
 
-##### Parameter: 
+**Parameter:** 
 
 + A configuration variable set after the training phase (usually part of a model)
 
-##### Endpoint: 
+**Endpoint:** 
 
 + Typically a model is deployed to an endpoint which may be a HTTPS service which serves up predictions (models may be also deployed to devices and other places)
 
-##### Training Pipeline: 
+**Training Pipeline:** 
 
 + All the steps needed to prepare a model
 
-##### Training set: 
+**Training set:** 
 
 + A set of example data used for training a model
 
@@ -162,3 +162,138 @@
 
 + Customer behavior analysis: Uncover patterns and insights for better marketing and product recommendations.
 
++ Content recommendation: Classify and tag content to make it easier to recommend similar items to users.
+
+
+## 3. Semi-Supervised Learning
+
+<img src="./Images/semi-supervised.png" height="250px" width="500px">
+
+<br>
+
++ Semi-Supervised learning is a machine learning algorithm that works between the supervised and unsupervised learning so it uses both labelled and unlabelled data.
+
++ It’s particularly useful when obtaining labeled data is costly, time-consuming, or resource-intensive.
+
++ This approach is useful when the dataset is expensive and time-consuming.
+
++ Semi-supervised learning is chosen when labeled data requires skills and relevant resources in order to train or learn from it.
+
++ We use these techniques when we are dealing with data that is a little bit labeled and the rest large portion of it is unlabeled. 
+
++ We can use the unsupervised techniques to predict labels and then feed these labels to supervised techniques. 
+
++ This technique is mostly applicable in the case of image data sets where usually all images are not labeled.
+
+
++ Types Semi-Supervised Learning Methods
+
+    
+    + Graph-based semi-supervised learning
+    
+    + Label propagation
+    
+    + Co-training
+    
+    + Self-training
+    
+    + Generative adversarial networks (GANs)
+
+### Advantages of Semi- Supervised Machine Learning
+
++ It leads to better generalization as compared to supervised learning, as it takes both labeled and unlabeled data.
+ 
++ Can be applied to a wide range of data.
+
+### Disadvantages of Semi-Supervised Machine Learning
+
++ Semi-supervised methods can be more complex to implement compared to other approaches.
+
++ It still requires some labeled data that might not always be available or easy to obtain.
+
+### Applications of Semi-Supervised Learning
+
+    
++ Image Classification and Object Recognition
+    
++ Speech Recognition
+    
++ Recommendation Systems
+    
++ Healthcare and Medical Imaging
+
+## 4. Reinforcement Machine Learning
+
+<img src="./Images/reinforcement.png" height="250px" width="500px">
+
+<br>
+
++ Reinforcement machine learning algorithm is a learning method that interacts with the environment by producing actions and discovering errors. 
+
++ Trial, error, and delay are the most relevant characteristics of reinforcement learning.
+
++ In this technique, the model keeps on increasing its performance using Reward Feedback to learn the behavior or pattern.
+
++ Each time we feed in data, they learn and add the data to their knowledge which is training data. So, the more it learns the better it gets trained and hence experienced.
+
++ most common reinforcement learning algorithms:
+
+    
+    + Q-learning  
+  
+       + Q-learning is a model-free RL algorithm that learns a Q-function, which maps states to actions. The Q-function estimates the expected reward of taking a particular action in a given state
+
+    + SARSA (State-Action-Reward-State-Action)
+     
+      + SARSA is another model-free RL algorithm that learns a Q-function. However, unlike Q-learning, SARSA updates the Q-function for the action that was actually taken, rather than the optimal action.
+
+    + Deep Q-learning
+     
+      + Deep Q-learning is a combination of Q-learning and deep learning. Deep Q-learning uses a neural network to represent the Q-function, which allows it to learn complex relationships between states and actions.
+
+
++ There are two main types of reinforcement learning:
+
+    + **Positive reinforcement**
+
+      + Rewards the agent for taking a desired action.
+    
+      + Encourages the agent to repeat the behavior.
+
+    + **Negative reinforcement**
+
+      + Removes an undesirable stimulus to encourage a desired behavior.
+
+      + Discourages the agent from repeating the behavior.
+
+### Advantages of Reinforcement Machine Learning
+
++ It has autonomous decision-making that is well-suited for tasks and that can learn to make a sequence of decisions, like robotics and game-playing.
+
++ This technique is preferred to achieve long-term results that are very difficult to achieve.
+
++ It is used to solve a complex problems that cannot be solved by conventional techniques.
+    
+### Disadvantages of Reinforcement Machine Learning
+
++ Training Reinforcement Learning agents can be computationally expensive and time-consuming.
+
++ Reinforcement learning is not preferable to solving simple problems.
+
++ It needs a lot of data and a lot of computation, which makes it impractical and costly.
+
+### Applications of Reinforcement Machine Learning
+
+
++ Game Playing
+
++ Robotics
+
++ Natural Language Processing
+
++ Adaptive Personal Assistants
+
++ Agriculture
+
+
+---
