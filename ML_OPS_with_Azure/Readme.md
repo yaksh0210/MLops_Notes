@@ -395,15 +395,24 @@ Which Language and libraries your team is comfartable in?? | **No Java Support**
 What type of machine learning Objective you want to acheive?|**Traditional ML**:Mlflow, Metaflow<br><br>**Deep Learning**:Valhoai, Allegro|
 Specialized platform or end-to-end approach??|**Focused** : Algorithmia, Pachyderm<br><br>**End-to-End** : Valohai, Allegro|
 
-
-
 ## Azure Machine Learning Components
 
+<center><img src="./images/main_components.png"></center>
+
+
 ### Open source tools and Frameworks
+
+<img src="./images/comp1.png">
+
+<br>
 
 + For model training and inferencing.You can use familiar frameworks like PyTorch, TensorFlow, Scikit-learn, and the new ones being MLflow, Kubeflow, or the open and interoperable ONNX format.
 
 ### Data Science Development Tools
+
+<img src="./images/comp2.png">
+
+<br>
 
 + It simplify your development task.
 
@@ -411,4 +420,66 @@ Specialized platform or end-to-end approach??|**Focused** : Algorithmia, Pachyde
 
 ### Automated ML (For those who doesn't like coding or not much familiar with coding)
 
-+ Here there is completely automating the process of creating a model to no code interface for building training and deploying the models of Azure machine learning platform
+<img src="./images/comp3.png">
+
+<br>
+
++ Here there is completely automating the process of creating a model to no code interface for building training and deploying the models of Azure machine learning platform.
+
++ It has drag-and-drop feature as well as some pre-build modules for generic use cases.
+
+### Entity Management 
+
+<img src="./images/comp4.png">
+
+<br>
+
++ It allows us to manage different assests used in ML lifecycle like dataset versioning , ML versioning , data profiling to see statistical characteristic of your data sets.
+
++ It also moinitor drifts in the datasets.
+
+
+### Security
+
+<img src="./images/comp5.png">
+
+<br>
+
++ We can access security capabilities such as role-based access , custom machine learning roles, virtual networks and private links.
+
++ Azure machine learning platform also allows us to get data privacy throughout the machine learning cycle with differential privacy techniques and confidential computing.
+
+## Governance
+
+<img src="./images/comp6.png">
+
+<br>
+
++ We can also manage governance with policies, audit trails, quotas and cost management.
+
++ Streamline the complinacne with a comprehansive portfolio spanning 60 certifications including the FedRAMP 5 and DISA IL5 
+
+
+## Model Serving
+
+<img src="./images/comp7.png">
+
+<br>
+
++ It has options to deliver models either in batch mode where you have lot of data to score against 
+
++ you also have option to do real time scoring .
+
++ for example how to capture credit card fraud transactions.
+
+## Hardware layer 
+
+<img src="./images/comp8.png">
+
+<br>
+
++ At the hardware layer, we get a powerful Azure infrastructure to accelerate the training and other processes.
+
++ we also  get to use CPUs, GPUs, DPUs,and FPGA to accelerate deep learning.
+
++ Also, We can train models on your hybrid infrastructure using Kubernetes cluster on-premises across multi-cloud environments, and at the edge with Azure ARC interoperability.
