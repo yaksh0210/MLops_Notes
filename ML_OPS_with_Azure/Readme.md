@@ -394,3 +394,21 @@ CLI vs GUI?| **CLI**: Seldon, Cortex, Optuna<br><br>**GUI** : Kubeflow, Polyaxon
 Which Language and libraries your team is comfartable in?? | **No Java Support**: Polyaxon, Comet, Optuna<br><br>**No Onnx Support**: kubeflow, ployaxon|
 What type of machine learning Objective you want to acheive?|**Traditional ML**:Mlflow, Metaflow<br><br>**Deep Learning**:Valhoai, Allegro|
 Specialized platform or end-to-end approach??|**Focused** : Algorithmia, Pachyderm<br><br>**End-to-End** : Valohai, Allegro|
+
+
+
+## Azure Machine Learning Components
+
+### Open source tools and Frameworks
+
++ For model training and inferencing.You can use familiar frameworks like PyTorch, TensorFlow, Scikit-learn, and the new ones being MLflow, Kubeflow, or the open and interoperable ONNX format.
+
+### Data Science Development Tools
+
++ It simplify your development task.
+
++ You can choose the one that best meet your needs.From popular IDEs, not limited to Jupyter Notebooks,PyCharm, Visual Code Studio, and CLIs, with programming languages such as Python and R. These are the important ones.
+
+### Automated ML (For those who doesn't like coding or not much familiar with coding)
+
++ Here there is completely automating the process of creating a model to no code interface for building training and deploying the models of Azure machine learning platform
