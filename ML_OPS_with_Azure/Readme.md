@@ -483,3 +483,102 @@ Specialized platform or end-to-end approach??|**Focused** : Algorithmia, Pachyde
 + we also  get to use CPUs, GPUs, DPUs,and FPGA to accelerate deep learning.
 
 + Also, We can train models on your hybrid infrastructure using Kubernetes cluster on-premises across multi-cloud environments, and at the edge with Azure ARC interoperability.
+
+---
+
+## Extra Topics
+
+## 1. What is canary Deployment??
+
+#### **Canary Deployment:**
+
++ A deployment strategy that releases a new version of an application or service incrementally to a subset of users, allowing for gradual testing and validation before rolling out to the entire user base.
+
+### **Key Characteristics:**
+
+**Incremental Rollout :** 
+
++ A small percentage of users are directed to the new version, while the majority remain on the existing version.
+
+**Simultaneous Operation :** 
+
++ Both the old and new versions run concurrently, allowing for real-time monitoring and testing.
+
+**Gradual Exposure :** 
+
++ Users are gradually shifted from the old to the new version, enabling detection of potential issues and bugs.
+
+**Rollback Capability :** 
+
++ If issues arise, the deployment can be quickly rolled back to the previous version, minimizing disruption to users.
+
+### Benefits :
+
+**1. Risk reduction:**
+
++ Canary deployments reduce the risk of widespread outages or service disruptions by testing the new version with a limited audience.
+
+**2. Faster issue detection:**
+
++ Problems are identified earlier, allowing for quicker resolution and minimizing downtime.
+
+**3. Improved user experience:**
+
++ Users are gradually transitioned to the new version, reducing the impact of any issues that may arise.
+
+## 2. what is conda file in mlops
+
++ In the context of MLOps (Machine Learning Operations), a conda file refers to a package specification file used by conda, a package and environment manager, to install and manage dependencies for a Python project. 
+
++ A conda file, typically named environment.yml or meta.yaml, describes the dependencies required by your project, including Python packages, libraries, and executables.
+
+
++ ```name:``` Specifies the name of the environment.
+
++ ``dependencies:`` Lists the packages and their versions required by your project.
+ 
++ ``build:`` Optional section for custom build instructions.
+ 
++ ``channels:`` Specifies the conda channels (repositories) to search for packages
+
+> Example
+
+```yml
+name: mymlproject
+
+dependencies:
+  python: 3.9
+  scikit-learn: 1.0.2
+  pandas: 1.4.4
+  numpy: 1.21.2
+  torch: 1.12.1
+  cudatoolkit: 11.6
+
+build:
+  noarch: python
+
+channels:
+  - defaults
+  - anaconda
+```
+
++ In MLOps, conda files are essential for:
+    
+    + **Reproducibility:** By specifying exact package versions, you ensure consistent environments across different machines and runs.
+    
+    + **Dependency management:** Conda files simplify the process of installing and updating dependencies, reducing the risk of version conflicts.
+    
+    + **Collaboration:** Conda files provide a clear, machine-readable definition of the environment, making it easier for team members to set up and share identical environments.
+
+
+## 3. MLOps Linting
+
++ In MLOps, a lint test is a type of automated code review tool that scans machine learning (ML) code for errors, inconsistencies, and best practices.
+
++ Linting is particularly useful in MLOps to ensure the quality and reliability of ML code, particularly during the development and deployment phases.
+
+### Key Aspects
+
++ Code Health
++ Code Style
++ Best Practices
