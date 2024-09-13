@@ -14,7 +14,7 @@
   <source src="./examples/Autonomous_Store.mp4" type="video/mp4">
 </video> -->
 
-<video controls src="examples/Autonomous_Store.mp4" title="Title"></video>
+https://github.com/yaksh0210/MLops_Notes/blob/main/MLOps_project/examples/Autonomous_Store.mp4
 
 
 ### This project demonstrate Infosy's capabilities in:
