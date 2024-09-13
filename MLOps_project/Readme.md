@@ -10,14 +10,9 @@
 
 #### Demo Video Of Autonomous Store
 
-<!-- <video  controls>
+<video  controls>
   <source src="./examples/Autonomous_Store.mp4" type="video/mp4">
-</video> -->
-
-
-<iframe width="560" height="315" src="./examples/Autonomous_Store.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
+</video>
 
 ### This project demonstrate Infosy's capabilities in:
 
