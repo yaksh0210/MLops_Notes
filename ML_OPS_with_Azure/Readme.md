@@ -486,6 +486,142 @@ Specialized platform or end-to-end approach??|**Focused** : Algorithmia, Pachyde
 
 ---
 
+# Building blocks of every MLOps solution
+
+## 1. Training pipeline
+
+<img src="./images/Training_pipeline.png">
+
+**1) Data preparation step:** 
++ It is a set of actions that should extract data from the data source (usually from the data registry), apply processing to prepare data for training, and save the processed version of the data.
+
+**2) Model training step:** 
+
++ The part of the pipeline that is responsible for the training procedure. As a result of this step, we have model artifacts that include model weights and code for execution. 
+
++ This list can be extended if needed. 
+
++ In short words, the output should contain all elements that will be used in inference serving. 
+
+**3) Model evaluation step:** 
+
++ In some cases, this step can be concatenated with the model training step. 
+
++ The goal of the evaluation step is to calculate quality metrics from the trained model. 
+
++ So the output here is quite simple - it is some file with metrics required by the machine learning task.
+
+**4) Model registration step:**
+
++ The goal of this step is to prepare model artifacts for deployment. 
+
++ The registration process is specific from one tool to another, and the list of actions performed inside this step is totally different. 
+
++ The only output should be the same from one solution to another - we should have a new version of the model stored in the model registry.
+
+**5) Deployment step:**
+
++ It is not a mandatory element for the training pipeline. 
+
++ Often the model deployment process is a separate step. 
+
++ But in case it is a part of the training pipeline, it also contains a Condition step that should take a decision about the necessity to deploy the model. 
+
+### How does it work :- 
+
++ The simplest way is to check the output from the evaluation step. 
+
++ If the current value is greater than the expected one - green light and let's deploy our model. 
+
++ The most common approach to deploy a model is to place it on some server with a real-time response that is usually called the endpoint
+
+## 2. Dataset registry
+
+<img src="./images/Dataset_registry.png">
+
++ data is a core thing of any Data Science solution. Without a good dataset, the training procedure can't guarantee a high quality of the trained model. 
+
++ That's why selecting the right strategy for storing datasets is crucial for the MLOps solution
+
+
+
+
+#### What is a dataset registry?
+
++ Physically it can be a database, repository, or any other object storage (depending on the task and preferences of the architect) that should satisfy at least several (not mandatory) points:
+
+
+    + **Provide API for dataset uploading and downloading:**
+        
+        + You don't need a tool named dataset registry if you can't operate the data with it.
+
+    + **Provide dataset versioning:** 
+    
+        + Different runs of the training pipeline can use different versions of the dataset. 
+        
+        + This information should be stored somehow, and what exactly should be covered by dataset versioning. 
+    
+    + **Provide API for getting metadata of the dataset:** 
+    
+        + There are a lot of reasons to store metadata of the dataset. The simplest is just for comparing different versions of the same dataset.
+
+
+## 3. Model registry
+
+<img src="./images/model_registry.png">
+
++ The goal of the model registry is similar to the mission of the dataset registry - store trained models and provide all required information about each of them. What should contain the model registry:
+
+    
+    + Provide API for model uploading and downloading
+    
+    + Provide model versioning mechanism
+    
+    + Metrics storage
+    
+    + Hyperparameters storage
+    
+    + Meta information about model artifacts
+
+
+
+## 4. Triggering mechanism
+
+<img src="./images/triggering_mechanism.png">
+
+
++ MLOps solution should work in automotive mode. 
+
++ So publishing it once, the developer shouldn't do anything with his pipeline - just make requests to the deployed model. 
+
++ To achieve this, we need to deal with triggering mechanisms. The idea is quite simple. 
+
++ The mission of any trigger is waiting for the event described in its requirements. 
+
++ After the event has occurred, the trigger should start pipeline execution. The simplest example is the dataset update trigger. 
+
++ It is waiting until a new version of the dataset is created and starting to retrain the model.
+
+## 5. Production pipeline
+
+<img src="./images/production_pipeline.png">
+
++ A deployment mechanism can be separated from the training pipeline into a block called the production pipeline. 
+
+#### When can it be useful?
+
++ you don't need to deploy a new model as soon as you train the model with higher accuracy than you have now. 
+
++ For example, you are waiting for a data structure update, the start of a new month, or any other mysterious triggering event. 
+
++ Usually, the production pipeline has the following steps inside:
+
+    + Get the best model from the data registry.
+    + Deploy new model into endpoint or any other tool.
+
+
+---
+
 ## Extra Topics
 
 ## 1. What is canary Deployment??
@@ -582,3 +718,15 @@ channels:
 + Code Health
 + Code Style
 + Best Practices
+
+
+
+
+
+
++ Made basic overview notes and pushed it to Github
+
++ And Also complete the course of MLops with azure overview
+
+
+
