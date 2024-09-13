@@ -10,11 +10,10 @@
 
 #### Demo Video Of Autonomous Store
 
-<!-- <video  controls>
+<video  controls>
   <source src="./examples/Autonomous_Store.mp4" type="video/mp4">
-</video> -->
+</video>
 
-<video src="./examples/Autonomous_Store.mp4">
 
 ### This project demonstrate Infosy's capabilities in:
 
