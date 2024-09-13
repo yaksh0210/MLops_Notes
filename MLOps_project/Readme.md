@@ -14,7 +14,7 @@
   <source src="./examples/Autonomous_Store.mp4" type="video/mp4">
 </video> -->
 
-<img src="./examples/Autonomous_Store.mp4">
+<video src="./examples/Autonomous_Store.mp4">
 
 ### This project demonstrate Infosy's capabilities in:
 
